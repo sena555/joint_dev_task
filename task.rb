@@ -106,7 +106,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  user_data.merge! (update_data)
+  user_data.merge!(update_data)
   puts user_data.values
 end
 
@@ -114,7 +114,7 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-  data.each_key {|key| puts "#{key}"}
+  data.each_value {|value| puts "#{value}"}
 end
 
 def q15
