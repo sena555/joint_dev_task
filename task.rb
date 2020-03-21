@@ -114,7 +114,7 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-  data.each_value {|value| puts "#{value}"}
+  p data.keys
 end
 
 def q15
@@ -122,7 +122,8 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  
+  p data1.include?(:age) ? "OK" : "NG"
+  p data2.include?(:age) ? "OK" : "NG"
 end
 
 def q16
@@ -134,6 +135,7 @@ def q16
   ]
 
   # 以下に回答を記載
+  users.each.with_index{|user| puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"}
 
 end
 
