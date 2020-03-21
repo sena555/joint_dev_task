@@ -135,13 +135,25 @@ def q16
   ]
 
   # 以下に回答を記載
-  users.each.with_index{|user| puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"}
+  users.each{|user| puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"}
 
 end
 
 class UserQ17
   # 以下に回答を記載
+ def initialize(name:,age:,gender:,admin:)
+  @name = name
+  @age = age
+  @gender = gender
+  @admin = admin ? "有り": "無し" 
+end
 
+ def info
+   puts "名前：#{@name}"
+   puts "年齢：#{@age}"
+   puts "性別：#{@gender}"
+   puts "管理者権限：#{@admin}"
+ end 
 end
 
 def q17
