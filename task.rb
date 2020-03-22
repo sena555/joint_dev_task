@@ -141,19 +141,20 @@ end
 
 class UserQ17
   # 以下に回答を記載
- def initialize(**params)
-  @name = params[:name]
-  @age = params[:age]
-  @gender = params[:gender]
-  @admin = params[:admin]
+ def initialize(**user)
+  @name = user[:name]
+  @age = user[:age]
+  @gender = user[:gender]
+  @admin = user[:admin]
 end
 
  def info
+  admin = @admin ? '有り' : '無し'
   puts <<~"EOS"
    名前：#{@name}
    年齢：#{@age}
    性別：#{@gender}
-   管理者権限：#{admin = @admin ? "有り": "無し"}
+   管理者権限：#{admin}
   EOS
  end 
 end
@@ -170,7 +171,7 @@ end
 
 class UserQ18
   # 以下に回答を記載
-
+  
 end
 
 def q18
